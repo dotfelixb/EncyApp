@@ -5,4 +5,16 @@
     <OutputType>Library</OutputType>
   </PropertyGroup>
 
+  <ItemGroup>
+    <EmbeddedResource Include="Styles\**;Scripts\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ExtCore.Mvc.Infrastructure" Version="5.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EncyApp.Infrastructure\EncyApp.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

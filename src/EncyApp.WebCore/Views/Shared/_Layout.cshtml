@@ -1,0 +1,20 @@
+﻿@*Copyright (c) 2020 dotfelixb*@
+@*See License in the project root for license information.*@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @await Component.InvokeAsync("Styles")
+</head>
+<body>
+    <div>
+        @await Component.InvokeAsync("Menu")
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+    @await Component.InvokeAsync("Scripts")
+</body>
+</html>

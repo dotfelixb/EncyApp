@@ -5,6 +5,7 @@ namespace EncyApp.WebApp
 {
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.Extensions.Hosting;
+    using Microsoft.Extensions.Logging;
 
     public class Program
     {
@@ -15,9 +16,14 @@ namespace EncyApp.WebApp
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
+            .ConfigureLogging((log) =>
+            {
+                log.ClearProviders();
+                log.AddConsole();
+            })
+            .ConfigureWebHostDefaults(webBuilder =>
+            {
                     webBuilder.UseStartup<Startup>();
-                });
+            });
     }
 }

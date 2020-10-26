@@ -8,8 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="ExtCore.Mvc" Version="5.1.0" />
     <PackageReference Include="ExtCore.WebApplication" Version="5.1.0" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EncyApp.WebCore\EncyApp.WebCore.csproj" />
   </ItemGroup>
 
 </Project>
