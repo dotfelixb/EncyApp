@@ -1,1 +1,39 @@
-﻿
+﻿html, body {
+    background-color: #e5ebf1;
+}
+
+body {
+    display: flex;
+    flex: 1;
+    min-width: 960px;
+    overflow-x: hidden;
+}
+
+.page_header {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    flex:1;
+    background-color: #4a76a8;
+    border-bottom: 1px solid #4a76a8;
+    height: 42px;
+    line-height: 20px;
+}
+
+.page_header_side {
+    flex: 1;
+}
+
+.page_header_center {
+    display: flex;
+    flex-grow: 3;
+    justify-content: space-between;
+    line-height: 42px;
+}
+
+.page_body {
+    margin-top: 42px;
+}
