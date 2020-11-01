@@ -5,14 +5,20 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
+    <title>Ency App</title>
     @await Component.InvokeAsync("Styles")
 </head>
 <body>
-    <div>
-        @await Component.InvokeAsync("Menu")
+    <div class="page_header">
+        <div class="page_header_side"></div>
+        <div class="page_header_center">
+            <span>Menu</span>
+            <span>Search</span>
+            <span>User</span>
+        </div>
+        <div class="page_header_side"></div>
     </div>
-    <div>
+    <div class="page_body">
         @RenderBody()
     </div>
     @await Component.InvokeAsync("Scripts")

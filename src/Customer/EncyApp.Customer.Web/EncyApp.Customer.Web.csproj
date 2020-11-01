@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\EncyApp.Infrastructure\EncyApp.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\EncyApp.WebCore\EncyApp.WebCore.csproj" />
+  </ItemGroup>
+
+</Project>
