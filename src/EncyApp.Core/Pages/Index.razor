@@ -1,0 +1,25 @@
+﻿@*
+    Copyright (c) 2020 dotfelixb
+    See License in the project root for license information.
+*@
+
+@page "/"
+
+<h1>Index Page</h1>
+
+Welcome to your new app.
+
+<h1>Counter</h1>
+
+<p>Current count: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}

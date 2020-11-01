@@ -8,16 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ExtCore.Mvc" Version="5.1.0" />
     <PackageReference Include="ExtCore.WebApplication" Version="5.1.0" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AssetManager\EncyApp.AssetManagement.Web\EncyApp.AssetManagement.Web.csproj" />
-    <ProjectReference Include="..\Customer\EncyApp.Customer.Web\EncyApp.Customer.Web.csproj" />
-    <ProjectReference Include="..\EncyApp.WebCore\EncyApp.WebCore.csproj" />
-    <ProjectReference Include="..\Invoice\EncyApp.Invoice.We\EncyApp.Invoice.Web.csproj" />
+    <ProjectReference Include="..\EncyApp.Core\EncyApp.Core.csproj" />
   </ItemGroup>
 
 </Project>
