@@ -17,8 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ency App</title>
     <base href="~/" />
-    @*<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
-        <link href="css/site.css" rel="stylesheet" />*@
+    @await Component.InvokeAsync("Styles")
 </head>
 <body>
     <app>
@@ -37,5 +36,6 @@
     </div>
 
     <script src="_framework/blazor.server.js"></script>
+    @await Component.InvokeAsync("Scripts")
 </body>
 </html>

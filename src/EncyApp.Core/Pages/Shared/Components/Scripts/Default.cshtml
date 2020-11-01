@@ -1,0 +1,7 @@
+﻿@*Copyright (c) 2020 dotfelixb*@
+@*See License in the project root for license information.*@
+@model IEnumerable<EncyApp.Core.ViewModel.ScriptViewModel>
+@foreach (var s in Model)
+{
+    <script src="@s.Url"></script>
+}
