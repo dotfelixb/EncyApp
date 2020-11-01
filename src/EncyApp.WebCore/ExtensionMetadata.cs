@@ -1,5 +1,7 @@
-﻿// Copyright (c) 2020 dotfelixb
-// See License in the project root for license information.
+﻿/*
+    Copyright (c) 2020 dotfelixb
+    See License in the project root for license information.
+*/
 
 namespace EncyApp.WebCore
 {
@@ -21,5 +23,7 @@ namespace EncyApp.WebCore
         };
 
         public IEnumerable<MenuItem> MenuItems => new MenuItem[] { new MenuItem("/", "Home", 100) };
+
+        public IEnumerable<PageMenu> PageMenuItems => new PageMenu[] { };
     }
 }

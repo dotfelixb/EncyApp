@@ -13,19 +13,19 @@ namespace EncyApp.WebCore.ViewComponents
     using System.Linq;
     using System.Threading.Tasks;
 
-    public class MenuViewComponent : ViewComponent
+    public class PageMenuViewComponent : ViewComponent
     {
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            var ss = new List<MenuItem>();
+            var ss = new List<PageMenu>();
 
             foreach (IExtensionMetadata em in ExtensionManager.GetInstances<IExtensionMetadata>())
             {
-                ss.AddRange(em.MenuItems);
+                ss.AddRange(em.PageMenuItems);
             }
 
             var vm = ss.OrderBy(o => o.Position)
-                .Select(s => new MenuViewModel { Name = s.Name, Url = s.Url });
+                .Select(s => new PageMenuViewModel { Name = s.Name, Description = s.Description, Url = s.Url });
 
             return View(vm);
         }

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -14,7 +14,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AssetManager\EncyApp.AssetManagement.Web\EncyApp.AssetManagement.Web.csproj" />
+    <ProjectReference Include="..\Customer\EncyApp.Customer.Web\EncyApp.Customer.Web.csproj" />
     <ProjectReference Include="..\EncyApp.WebCore\EncyApp.WebCore.csproj" />
+    <ProjectReference Include="..\Invoice\EncyApp.Invoice.We\EncyApp.Invoice.Web.csproj" />
   </ItemGroup>
 
 </Project>

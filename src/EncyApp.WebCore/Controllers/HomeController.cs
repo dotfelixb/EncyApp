@@ -1,5 +1,7 @@
-﻿// Copyright (c) 2020 dotfelixb
-// See License in the project root for license information.
+﻿/*
+    Copyright (c) 2020 dotfelixb
+    See License in the project root for license information.
+*/
 
 namespace EncyApp.WebCore.Controllers
 {
@@ -7,6 +9,10 @@ namespace EncyApp.WebCore.Controllers
 
     public class HomeController : Controller
     {
+        public HomeController()
+        {
+        }
+
         public IActionResult Index()
         {
             return View();

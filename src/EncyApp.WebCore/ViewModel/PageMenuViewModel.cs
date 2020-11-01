@@ -5,8 +5,10 @@
 
 namespace EncyApp.WebCore.ViewModel
 {
-    public class StyleSheetViewModel
+    public class PageMenuViewModel
     {
+        public string Name { get; set; }
+        public string Description { get; set; }
         public string Url { get; set; }
     }
 }

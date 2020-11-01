@@ -5,14 +5,18 @@
 
 namespace EncyApp.Infrastructure
 {
-    public class Script
+    public class PageMenu
     {
         public string Url { get; set; }
+        public string Name { get; }
+        public string Description { get; }
         public int Position { get; }
 
-        public Script(string url, int position)
+        public PageMenu(string url, string name, string description, int position)
         {
             Url = url;
+            Name = name;
+            Description = description;
             Position = position;
         }
     }

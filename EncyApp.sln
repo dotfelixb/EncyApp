@@ -24,15 +24,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EncyApp.Infrastructure", "s
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Customer", "Customer", "{C4242826-E860-4FA6-946D-3DEBAFA11A40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncyApp.Customer.Web", "src\Customer\EncyApp.Customer.Web\EncyApp.Customer.Web.csproj", "{C5ED7578-845D-4508-87D2-57203866D67A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EncyApp.Customer.Web", "src\Customer\EncyApp.Customer.Web\EncyApp.Customer.Web.csproj", "{C5ED7578-845D-4508-87D2-57203866D67A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Invoice", "Invoice", "{9E8CC693-28F2-4C3A-BFC1-DA9A2A1DC933}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncyApp.Invoice.We", "src\Invoice\EncyApp.Invoice.We\EncyApp.Invoice.We.csproj", "{9C079528-2C60-449E-B80B-25668739EEF5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EncyApp.Invoice.Web", "src\Invoice\EncyApp.Invoice.We\EncyApp.Invoice.Web.csproj", "{9C079528-2C60-449E-B80B-25668739EEF5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AssetManagement", "AssetManagement", "{65A107E4-20A8-4A3C-9867-8E9D645C328B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncyApp.AssetManagement.Web", "src\AssetManager\EncyApp.AssetManagement.Web\EncyApp.AssetManagement.Web.csproj", "{0279597D-B9A1-4999-99FA-88F46D0AA07A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EncyApp.AssetManagement.Web", "src\AssetManager\EncyApp.AssetManagement.Web\EncyApp.AssetManagement.Web.csproj", "{0279597D-B9A1-4999-99FA-88F46D0AA07A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncyApp.Core", "src\EncyApp.Core\EncyApp.Core.csproj", "{A117152F-73B6-478B-A816-0B5506370A2A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -116,6 +118,18 @@ Global
 		{0279597D-B9A1-4999-99FA-88F46D0AA07A}.Release|x64.Build.0 = Release|Any CPU
 		{0279597D-B9A1-4999-99FA-88F46D0AA07A}.Release|x86.ActiveCfg = Release|Any CPU
 		{0279597D-B9A1-4999-99FA-88F46D0AA07A}.Release|x86.Build.0 = Release|Any CPU
+		{A117152F-73B6-478B-A816-0B5506370A2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A117152F-73B6-478B-A816-0B5506370A2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A117152F-73B6-478B-A816-0B5506370A2A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A117152F-73B6-478B-A816-0B5506370A2A}.Debug|x64.Build.0 = Debug|Any CPU
+		{A117152F-73B6-478B-A816-0B5506370A2A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A117152F-73B6-478B-A816-0B5506370A2A}.Debug|x86.Build.0 = Debug|Any CPU
+		{A117152F-73B6-478B-A816-0B5506370A2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A117152F-73B6-478B-A816-0B5506370A2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A117152F-73B6-478B-A816-0B5506370A2A}.Release|x64.ActiveCfg = Release|Any CPU
+		{A117152F-73B6-478B-A816-0B5506370A2A}.Release|x64.Build.0 = Release|Any CPU
+		{A117152F-73B6-478B-A816-0B5506370A2A}.Release|x86.ActiveCfg = Release|Any CPU
+		{A117152F-73B6-478B-A816-0B5506370A2A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -133,6 +147,7 @@ Global
 		{9C079528-2C60-449E-B80B-25668739EEF5} = {9E8CC693-28F2-4C3A-BFC1-DA9A2A1DC933}
 		{65A107E4-20A8-4A3C-9867-8E9D645C328B} = {C63DC6EA-E7A7-48DA-BC49-217AF2FF3EE4}
 		{0279597D-B9A1-4999-99FA-88F46D0AA07A} = {65A107E4-20A8-4A3C-9867-8E9D645C328B}
+		{A117152F-73B6-478B-A816-0B5506370A2A} = {3AE995A2-2DCC-4137-A207-87809FACDC18}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0B61884B-95CF-4C2F-83C2-4BCE103E6FD3}
