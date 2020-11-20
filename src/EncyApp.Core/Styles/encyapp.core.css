@@ -3,26 +3,39 @@
     See License in the project root for license information.
 */
 
-html, body {
+body {
+    display: grid;
+    font-family: system-ui, sans-serif;
     background-color: #e5ebf1;
 }
 
 app {
-    position: relative;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+}
+
+.page_bar, .page_crumb, .page_body {
+    padding: 0 45px;
+}
+
+.page_bar, .page_crumb {
     display: flex;
-    flex-direction: column;
+    height: 42px;
+    line-height: 42px;
 }
 
-.valid.modified:not([type=checkbox]) {
-    outline: 1px solid #26b050;
+.page_bar {
+    align-content: center;
+    justify-content: space-between;
+    background-color: #4a76a8;
+    border-bottom: 1px solid #4a76a8;
 }
 
-.invalid {
-    outline: 1px solid red;
-}
+    .page_bar div {
+        color: #ffffff;
+    }
 
-.validation-message {
-    color: red;
+.page_body {
 }
 
 #blazor-error-ui {
@@ -45,9 +58,7 @@ app {
     }
 
 @media (max-width: 767.98px) {
-    
 }
 
 @media (min-width: 768px) {
-    
 }
