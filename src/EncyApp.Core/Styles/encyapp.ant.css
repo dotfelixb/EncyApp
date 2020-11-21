@@ -1,0 +1,48 @@
+﻿/*
+    Copyright (c) 2020 dotfelixb
+    See License in the project root for license information.
+*/
+
+:root {
+    --blue: #4a76a8;
+    --white: #ffffff;
+}
+
+/* ant button customization */
+.ant-btn {
+}
+
+    .ant-btn:focus, .ant-btn:hover {
+        color: var(--blue);
+        border-color: var(--blue);
+    }
+
+.ant-btn-primary {
+    background: var(--blue);
+    border-color: var(--blue);
+
+}
+
+    .ant-btn-primary:focus, .ant-btn-primary:hover {
+        background: var(--blue);
+        border-color: var(--blue);
+        color: var(--white);
+        opacity: .88;
+    }
+
+.ant-btn-link {
+    color: var(--blue);
+}
+
+.ant-btn-dangerous {
+    color: #ff4d4f;
+    background: #fff;
+    border-color: #ff4d4f;
+}
+
+    .ant-btn-dangerous:focus, .ant-btn-dangerous:hover {
+        color: #ff4d4f;
+        background: #fff;
+        border-color: #ff4d4f;
+        opacity: .88;
+    }

@@ -13,7 +13,8 @@ namespace EncyApp.Core
     {
         public IEnumerable<StyleSheet> StyleSheets => new StyleSheet[]
         {
-            new StyleSheet("/Styles.encyapp.core.css", 200)
+            new StyleSheet("/Styles.encyapp.ant.css", 200),
+            new StyleSheet("/Styles.encyapp.core.css", 300)
         };
 
         public IEnumerable<Script> Scripts => new Script[] 
