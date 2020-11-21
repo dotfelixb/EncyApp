@@ -3,7 +3,10 @@
     See License in the project root for license information.
 *@
 
-<Router AppAssembly="@typeof(ExtensionMetadata).Assembly">
+@using System.Reflection
+@using ExtCore.Infrastructure
+
+<Router AppAssembly="@typeof(EncyAppMetadata).Assembly" AdditionalAssemblies="LoadAdditionalAssemblies">
     <Found Context="routeData">
         <RouteView RouteData="@routeData" DefaultLayout="@typeof(EncyApp.Core.Pages.Shared.Layout)" />
     </Found>
@@ -13,4 +16,22 @@
         </LayoutView>
     </NotFound>
 </Router>
-<AntContainer /> 
+<AntContainer />
+
+@code {
+    public IEnumerable<Assembly> LoadAdditionalAssemblies { get; set; }
+
+    protected override void OnInitialized()
+    {
+        var list = new List<Assembly>();
+        foreach (var asm in ExtensionManager.GetInstances<IExtension>())
+        {
+            if (this.GetType().Assembly != asm.GetType().Assembly)
+            {
+                list.Add(asm.GetType().Assembly);
+            }
+        }
+
+        LoadAdditionalAssemblies = list;
+    }
+}

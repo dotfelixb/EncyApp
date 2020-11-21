@@ -15,11 +15,11 @@ namespace EncyApp.Core.ViewComponents
 
     public class MenuViewComponent : ViewComponent
     {
-        public async Task<IViewComponentResult> InvokeAsync()
+        public IViewComponentResult Invoke()
         {
             var ss = new List<MenuItem>();
 
-            foreach (IExtensionMetadata em in ExtensionManager.GetInstances<IExtensionMetadata>())
+            foreach (var em in ExtensionManager.GetInstances<IExtensionMetadata>())
             {
                 ss.AddRange(em.MenuItems);
             }

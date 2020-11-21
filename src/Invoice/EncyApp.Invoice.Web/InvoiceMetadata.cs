@@ -1,9 +1,14 @@
-﻿using EncyApp.Infrastructure;
-using System.Collections.Generic;
+﻿/*
+    Copyright (c) 2020 dotfelixb
+    See License in the project root for license information.
+*/
 
 namespace EncyApp.Invoice.Web
 {
-    public class ExtensionMetadata : IExtensionMetadata
+    using EncyApp.Infrastructure;
+    using ExtCore.Infrastructure;
+    using System.Collections.Generic;
+    public class InvoiceMetadata : ExtensionBase, IExtensionMetadata
     {
         public IEnumerable<StyleSheet> StyleSheets => new StyleSheet[] { };
 

@@ -1,12 +1,13 @@
-﻿using EncyApp.Infrastructure;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿/*
+    Copyright (c) 2020 dotfelixb
+    See License in the project root for license information.
+*/
 
 namespace EncyApp.AssetManagement.Web
 {
-    public class ExtensionMetadata : IExtensionMetadata
+    using EncyApp.Infrastructure;
+    using System.Collections.Generic;
+    public class AssetsMetadata : IExtensionMetadata
     {
         public IEnumerable<StyleSheet> StyleSheets => new StyleSheet[] { };
 

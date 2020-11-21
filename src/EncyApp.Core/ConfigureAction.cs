@@ -5,10 +5,11 @@
 
 namespace EncyApp.Core
 {
+    using ExtCore.Infrastructure.Actions;
     using Microsoft.AspNetCore.Builder;
     using System;
 
-    public class ConfigureAction : ExtCore.Infrastructure.Actions.IConfigureAction
+    public class ConfigureAction : IConfigureAction
     {
         public int Priority => 100;
 

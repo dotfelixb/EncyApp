@@ -3,10 +3,18 @@
     See License in the project root for license information.
 */
 
+:root {
+    --blue: #4a76a8;
+    --ltblue: #e5ebf1;
+    --white: #ffffff;
+    --bglight: #e5ebf16e;
+    --black: #000000;
+}
+
 body {
     display: grid;
     font-family: system-ui, sans-serif;
-    background-color: #e5ebf175;
+    background-color: var(--bglight);
 }
 
 app {
@@ -18,17 +26,25 @@ app {
     padding: 0 45px;
 }
 
-.page_bar, .page_crumb {
+.page_bar {
     display: flex;
     height: 42px;
     line-height: 42px;
 }
 
+.page_crumb {
+    display: flex;
+    height: 63px;
+    line-height: 63px;
+    background-color: var(--ltblue);
+    border-bottom: 1px solid var(--ltblue);
+}
+
 .page_bar {
     align-content: center;
     justify-content: space-between;
-    background-color: #4a76a8;
-    border-bottom: 1px solid #4a76a8;
+    background-color: var(--blue);
+    border-bottom: 1px solid var(--blue);
 }
 
     .page_bar div {
@@ -36,6 +52,23 @@ app {
     }
 
 .page_body {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.page_body_sidebar { 
+    min-width: 204px;
+}
+
+.page_body_content {
+    display: flex;
+    background: var(--white);
+}
+
+.bold_text {
+    text-transform: uppercase;
+    color: var(--black);
+    opacity: 0.6
 }
 
 #blazor-error-ui {
