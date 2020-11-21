@@ -3,8 +3,46 @@
     See License in the project root for license information.
 *@
 
-<div class="page_body_sidebar"></div>
+@using EncyApp.Core.ViewModel
+@using EncyApp.Infrastructure
+@using ExtCore.Infrastructure
+
+<div class="page_body_sidebar">
+    <div class=""><span class="bold_text">@Title</span></div>
+    <br />
+    @foreach (var m in MenuItems)
+    {
+        <div>
+            <a href="@m.Url">
+                <div>
+                    <div>@m.Name</div>
+                </div>
+            </a>
+        </div>
+    }
+    @ChildContent
+</div>
 
 @code {
+    [Parameter]
+    public string Title { get; set; }
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
 
+    public IEnumerable<PageMenuViewModel> MenuItems { get; set; }
+
+    protected override void OnInitialized()
+    {
+        var ss = new List<PageMenu>();
+
+        foreach (var em in ExtensionManager.GetInstances<IExtensionMetadata>())
+        {
+            ss.AddRange(em.PageMenuItems);
+        }
+
+        var vm = ss.OrderBy(o => o.Position)
+            .Select(s => new PageMenuViewModel { Name = s.Name, Description = s.Description, Url = s.Url });
+
+        MenuItems = vm;
+    }
 }

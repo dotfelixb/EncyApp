@@ -8,8 +8,9 @@ namespace EncyApp.Core
     using System;
     using EncyApp.Infrastructure;
     using System.Collections.Generic;
+    using ExtCore.Infrastructure;
 
-    public class ExtensionMetadata : IExtensionMetadata
+    public class EncyAppMetadata : ExtensionBase, IExtensionMetadata
     {
         public IEnumerable<StyleSheet> StyleSheets => new StyleSheet[]
         {

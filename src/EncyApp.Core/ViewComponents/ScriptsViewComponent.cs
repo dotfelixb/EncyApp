@@ -15,7 +15,7 @@ namespace EncyApp.Core.ViewComponents
 
     public class ScriptsViewComponent : ViewComponent
     {
-        public async Task<IViewComponentResult> InvokeAsync()
+        public IViewComponentResult Invoke()
         {
             var ss = new List<Script>();
 

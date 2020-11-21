@@ -8,6 +8,7 @@
     --ltblue: #e5ebf1;
     --white: #ffffff;
     --bglight: #e5ebf16e;
+    --black: #000000;
 }
 
 body {
@@ -62,6 +63,12 @@ app {
 .page_body_content {
     display: flex;
     background: var(--white);
+}
+
+.bold_text {
+    text-transform: uppercase;
+    color: var(--black);
+    opacity: 0.6
 }
 
 #blazor-error-ui {
