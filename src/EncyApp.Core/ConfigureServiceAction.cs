@@ -15,6 +15,7 @@ namespace EncyApp.Core
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
+            services.AddAntDesign();
         }
     }
 }
