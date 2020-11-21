@@ -1,0 +1,13 @@
+﻿@*
+    Copyright (c) 2020 dotfelixb
+    See License in the project root for license information.
+*@
+
+<div class="page_crumb">
+    @ChildContent
+</div>
+
+@code {
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+}

@@ -19,7 +19,7 @@ namespace EncyApp.Core.ViewComponents
         {
             var ss = new List<MenuItem>();
 
-            foreach (IExtensionMetadata em in ExtensionManager.GetInstances<IExtensionMetadata>())
+            foreach (var em in ExtensionManager.GetInstances<IExtensionMetadata>())
             {
                 ss.AddRange(em.MenuItems);
             }
