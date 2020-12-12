@@ -6,9 +6,9 @@
 namespace EncyApp.Customer.Web
 {
     using EncyApp.Infrastructure;
-    using System.Collections.Generic;
-    using System;
     using ExtCore.Infrastructure;
+    using System;
+    using System.Collections.Generic;
 
     public class CustomerMetadata : ExtensionBase, IExtensionMetadata
     {
@@ -20,9 +20,9 @@ namespace EncyApp.Customer.Web
 
         public IEnumerable<PageMenu> PageMenuItems => new PageMenu[]
         {
-            new PageMenu ("/customer", 
-                "Customer", 
-                "Ency CRM lets you manage you customers putting you close to their business needs", 
+            new PageMenu ("/customer",
+                "Customer",
+                "Ency CRM lets you manage you customers putting you close to their business needs",
                 200)
         };
     }

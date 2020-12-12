@@ -32,6 +32,10 @@ app {
     line-height: 42px;
 }
 
+    .page_bar .page_bar_menu_item a {
+        color: #ffffff;
+    }
+
 .page_crumb {
     display: flex;
     height: 63px;
@@ -56,12 +60,12 @@ app {
     grid-template-columns: auto 1fr;
 }
 
-.page_body_sidebar { 
+.page_body_sidebar {
     min-width: 204px;
 }
 
 .page_body_content {
-    display: flex;
+    display: block;
     background: var(--white);
 }
 

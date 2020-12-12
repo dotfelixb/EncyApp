@@ -1,12 +1,39 @@
-﻿@layout Layout
+﻿@*
+    Copyright (c) 2020 dotfelixb
+    See License in the project root for license information.
+*@
+
+@layout Layout
 @page "/customer"
 
 <AppHeader></AppHeader>
 
 <AppBody>
-    <AppSidebar title="App" />
+    <AppSidebar Title="App" RenderDefault="false">
+        <div>
+            <a href="/customer/list">List Customer</a>
+        </div>
+        <div>
+            <a href="/customer/new">New Customer</a>
+        </div>
+        <div>
+            <a href="/customer/edit">Edit Customer</a>
+        </div>
+    </AppSidebar>
+
     <AppContent>
-        <h3>Customer</h3>
+        <div>
+            <h3>Customer</h3>
+        </div>
+        <div>
+            <a href="/customer/list">List Customer</a>
+        </div>
+        <div>
+            <a href="/customer/new">New Customer</a>
+        </div>
+        <div>
+            <a href="/customer/edit">Edit Customer</a>
+        </div>
     </AppContent>
 </AppBody>
 

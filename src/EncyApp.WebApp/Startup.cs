@@ -2,6 +2,7 @@
     Copyright (c) 2020 dotfelixb
     See License in the project root for license information.
 */
+
 namespace EncyApp.WebApp
 {
     using ExtCore.WebApplication.Extensions;
@@ -11,7 +12,7 @@ namespace EncyApp.WebApp
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
 
-    public class Startup 
+    public class Startup
     {
         public Startup(IWebHostEnvironment env, IConfiguration configuration)
         {

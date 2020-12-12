@@ -5,10 +5,10 @@
 
 namespace EncyApp.Core
 {
-    using System;
     using EncyApp.Infrastructure;
-    using System.Collections.Generic;
     using ExtCore.Infrastructure;
+    using System;
+    using System.Collections.Generic;
 
     public class EncyAppMetadata : ExtensionBase, IExtensionMetadata
     {
@@ -18,7 +18,7 @@ namespace EncyApp.Core
             new StyleSheet("/Styles.encyapp.core.css", 300)
         };
 
-        public IEnumerable<Script> Scripts => new Script[] 
+        public IEnumerable<Script> Scripts => new Script[]
         {
             new Script("/Scripts.encyapp.core.js", 300)
         };

@@ -9,29 +9,36 @@
 
 <div class="page_body_sidebar">
     <div class=""><span class="bold_text">@Title</span></div>
-    <br />
-    <div>
-        @* index page route *@
-        <a href="/">
-            <div>
-                <div><span>Dashboard</span></div>
-            </div>
-        </a>
-        @foreach (var m in MenuItems)
-        {
-            <a href="@m.Url">
+    @if (RenderDefault)
+    {
+        <br />
+        <div>
+            @* index page route *@
+            <a href="/">
                 <div>
-                    <div><span>@m.Name</span></div>
+                    <div><span>Dashboard</span></div>
                 </div>
             </a>
-        }
-    </div>
+            @foreach (var m in MenuItems)
+            {
+                <a href="@m.Url">
+                    <div>
+                        <div><span>@m.Name</span></div>
+                    </div>
+                </a>
+            }
+        </div>
+    }
     @ChildContent
 </div>
 
 @code {
     [Parameter]
     public string Title { get; set; }
+
+    [Parameter]
+    public bool RenderDefault { get; set; } = true;
+
     [Parameter]
     public RenderFragment ChildContent { get; set; }
 
