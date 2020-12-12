@@ -5,10 +5,13 @@
 
 @using System.Reflection
 @using ExtCore.Infrastructure
+@using System.Linq
 
-<Router AppAssembly="@typeof(EncyAppMetadata).Assembly" AdditionalAssemblies="LoadAdditionalAssemblies">
+<Router AppAssembly="@typeof(EncyAppMetadata).Assembly"
+        AdditionalAssemblies="LoadAdditionalAssemblies">
     <Found Context="routeData">
-        <RouteView RouteData="@routeData" DefaultLayout="@typeof(EncyApp.Core.Pages.Shared.Layout)" />
+        <RouteView RouteData="@routeData"
+                   DefaultLayout="@typeof(EncyApp.Core.Pages.Shared.Layout)" />
     </Found>
     <NotFound>
         <LayoutView Layout="@typeof(EncyApp.Core.Pages.Shared.Layout)">
@@ -19,19 +22,15 @@
 <AntContainer />
 
 @code {
+    // Blazor should scan these assembles for route
     public IEnumerable<Assembly> LoadAdditionalAssemblies { get; set; }
 
     protected override void OnInitialized()
     {
-        var list = new List<Assembly>();
-        foreach (var asm in ExtensionManager.GetInstances<IExtension>())
+        LoadAdditionalAssemblies = ExtensionManager.GetInstances<IExtension>().Where(asm =>
         {
-            if (this.GetType().Assembly != asm.GetType().Assembly)
-            {
-                list.Add(asm.GetType().Assembly);
-            }
-        }
+            return (this.GetType().Assembly != asm.GetType().Assembly);
 
-        LoadAdditionalAssemblies = list;
+        }).Select(asm => asm.GetType().Assembly);
     }
 }

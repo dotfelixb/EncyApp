@@ -8,10 +8,9 @@ namespace EncyApp.Core.ViewComponents
     using EncyApp.Core.ViewModel;
     using EncyApp.Infrastructure;
     using ExtCore.Infrastructure;
-    using Microsoft.AspNetCore.Mvc; 
+    using Microsoft.AspNetCore.Mvc;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Threading.Tasks;
 
     public class ScriptsViewComponent : ViewComponent
     {

@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AssetManager\EncyApp.AssetManagement.Web\EncyApp.AssetManagement.Web.csproj" />
     <ProjectReference Include="..\Customer\EncyApp.Customer.Web\EncyApp.Customer.Web.csproj" />
     <ProjectReference Include="..\EncyApp.Core\EncyApp.Core.csproj" />
     <ProjectReference Include="..\Invoice\EncyApp.Invoice.Web\EncyApp.Invoice.Web.csproj" />

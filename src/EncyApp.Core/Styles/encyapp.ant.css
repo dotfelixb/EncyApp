@@ -20,7 +20,6 @@
 .ant-btn-primary {
     background: var(--blue);
     border-color: var(--blue);
-
 }
 
     .ant-btn-primary:focus, .ant-btn-primary:hover {

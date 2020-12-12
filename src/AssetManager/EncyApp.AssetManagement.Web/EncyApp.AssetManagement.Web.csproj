@@ -9,4 +9,8 @@
     <ProjectReference Include="..\..\EncyApp.Core\EncyApp.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\**;Styles\**;Scripts\**" />
+  </ItemGroup>
+
 </Project>

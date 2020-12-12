@@ -25,7 +25,7 @@ namespace EncyApp.WebApp
             })
             .ConfigureWebHostDefaults(webBuilder =>
             {
-                    webBuilder.UseStartup<Startup>();
+                webBuilder.UseStartup<Startup>();
             });
     }
 }

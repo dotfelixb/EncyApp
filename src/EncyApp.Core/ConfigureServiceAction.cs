@@ -8,6 +8,7 @@ namespace EncyApp.Core
     using ExtCore.Infrastructure.Actions;
     using Microsoft.Extensions.DependencyInjection;
     using System;
+
     public class ConfigureServiceAction : IConfigureServicesAction
     {
         public int Priority => 100;
